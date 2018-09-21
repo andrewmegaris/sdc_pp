@@ -258,22 +258,21 @@ int main() {
 			{
                 float d = sensor_fusion[i][6];
                 int my_lane = -1;
+
                 if ( d > 0 && d < 4 ) 
-				{
-                  my_lane = 0;
-                } 
-		else if ( d > 4 && d < 8 ) 
 		{
-                  my_lane = 1;
+                  my_lane = 0;
                 } 
 		else if ( d > 8 && d < 12 ) 
 		{
                   my_lane = 2;
                 }
-                if (my_lane < 0) 
+		else if ( d > 4 && d < 8 ) 
 		{
-                  continue;
-                }
+                  my_lane = 1;
+                } 
+
+
 
                 double vx = sensor_fusion[i][3];
                 double vy = sensor_fusion[i][4];
@@ -286,14 +285,14 @@ int main() {
 		{
                   car_ahead |= (check_car_s > car_s && check_car_s - car_s < 30);
                 } 
-		else if ( my_lane - lane == -1 ) 
-		{
-                  car_left |= (car_s - 30 < check_car_s && car_s + 30 > check_car_s);
-                } 
 		else if ( my_lane - lane == 1 ) 
 		{
                   car_right |= (car_s - 30 < check_car_s && car_s + 30 > check_car_s);
                 }
+		else if ( my_lane - lane == -1 ) 
+		{
+                  car_left |= (car_s - 30 < check_car_s && car_s + 30 > check_car_s);
+                } 
             }
 
             double speed_diff = 0;
