@@ -1,0 +1,3 @@
+/home/andrew/Desktop/linuxcan/CarND-Path-Planning-Project-master_a/build/CMakeFiles/edit_cache.dir
+/home/andrew/Desktop/linuxcan/CarND-Path-Planning-Project-master_a/build/CMakeFiles/rebuild_cache.dir
+/home/andrew/Desktop/linuxcan/CarND-Path-Planning-Project-master_a/build/CMakeFiles/path_planning.dir
