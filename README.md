@@ -1,6 +1,35 @@
 # CarND-Path-Planning-Project
 Self-Driving Car Engineer Nanodegree Program
    
+
+### Rubric Points :
+
+#### Compiles correctly: 
+No changes where made to the original make file provided by Udacity.  The spline library is utilized per the recommendations of the Udacity team.
+
+#### Drive 4.32 miles without incident:
+I have tested the path generator several times exceeding 10 miles with no incident!
+
+#### Stay within speed limit:
+No speed limit warnings have been observed.  Max speed is set to 49.5 mph
+
+#### Max acceleration and jerk are not exceeded:
+No acceleration or jerk warning have been observed.  Max acceleration is set to .20 
+
+#### Car does not have collisions:
+No collisions have been observed!
+
+#### Car stays in lanes except for lane changes
+Car does not drift into other lanes, except when a lane change is being executed.
+
+#### Car is able to change lanes:
+Car can successfully and safely change lanes!
+
+#### Model Documentation:
+This model uses three primary steps to execute it's function.  It will assess the environment around it, this is starting at line 257.  It will decide, if and what lane changes are safe.  Starting at line 302 it will assess what behavior should be taken, is there a car ahead?  Should the vehicle speed up or slow down?  Lastly the trajectory is generated, this code is starting at line 332.  This code follows the code provided by the Udacity team.
+
+
+
 ### Simulator.
 You can download the Term3 Simulator which contains the Path Planning Project from the [releases tab (https://github.com/udacity/self-driving-car-sim/releases/tag/T3_v1.2).
 
